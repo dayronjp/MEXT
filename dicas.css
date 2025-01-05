@@ -1,0 +1,108 @@
+/* Definindo a imagem de fundo para o body */
+body {
+    background-image: url('image/openart-image_5rvlLceH_1736040674744_raw\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+    padding: 20px 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Estilizando a seção de dicas */
+section {
+    padding: 20px;
+    max-inline-size: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com leve transparência */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-block-end: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-block-start: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo claro para as dicas */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito de hover nas dicas */
+}
+
+/* Estilo para o campo de entrada e botão */
+input[type="text"] {
+    inline-size: calc(100% - 30px);
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    inline-size: 100%;
+    margin-block-start: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilizando o rodapé */
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    inline-size: 100%;
+    inset-block-end: 0;
+}

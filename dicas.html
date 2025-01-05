@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>僕の準備</title>
+    <link rel="stylesheet" href="dicas.css">
+    <script>
+        
+        function addTip() {
+            let tipText = document.getElementById("tipInput").value;
+            if (tipText !== "") {
+                let tipsList = document.getElementById("tipsList");
+                let newTip = document.createElement("li");
+                newTip.textContent = tipText;
+                tipsList.appendChild(newTip);
+
+                
+                saveTips();
+            }
+            document.getElementById("tipInput").value = ""; 
+        }
+
+        function saveTips() {
+            let tips = [];
+            let tipsList = document.getElementById("tipsList");
+            let listItems = tipsList.getElementsByTagName("li");
+            for (let item of listItems) {
+                tips.push(item.textContent);
+            }
+            localStorage.setItem("mextTips", JSON.stringify(tips));
+        }
+
+        function loadTips() {
+            let savedTips = JSON.parse(localStorage.getItem("mextTips"));
+            if (savedTips) {
+                let tipsList = document.getElementById("tipsList");
+                for (let tip of savedTips) {
+                    let newTip = document.createElement("li");
+                    newTip.textContent = tip;
+                    tipsList.appendChild(newTip);
+                }
+            }
+        }
+
+        window.onload = loadTips;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>私のMEXT奨学金準備</h1>
+    </header>
+
+    <section>
+        <h2>準備のヒント</h2>
+        <ul id="tipsList">
+        </ul>
+        <h3>新しいヒントを追加</h3>
+        <input type="text" id="tipInput" placeholder="新しいヒントを入力">
+        <button onclick="addTip()">追加</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 私のMEXT奨学金準備</p>
+    </footer>
+</body>
+</html>

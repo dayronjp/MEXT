@@ -1,0 +1,63 @@
+body {
+    background-image: url('image/1676454.jpg');
+    text-align: center; /* Centraliza o conteúdo no corpo */
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 img {
+    inline-size: 20%;
+    max-inline-size: 200px;
+    block-size: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    display: inline-block; /* Faz o link comportar-se como um bloco */
+    inline-size: 280px; /* Define o tamanho da imagem */
+    block-size: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Borda arredondada */
+    overflow: hidden; /* Garante que a borda arredondada seja aplicada corretamente */
+    margin: 30px; /* Aumenta a margem entre as imagens */
+}
+
+a img {
+    inline-size: 100%; /* Faz a imagem ocupar 100% da largura do link */
+    block-size: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço embaixo da imagem */
+    border-radius: 15px; /* Aplica bordas arredondadas à imagem */
+    transition: transform 0.3s ease; /* Efeito de transição suave */
+}
+
+a:hover img {
+    transform: scale(1.05); /* Leve aumento no tamanho da imagem ao passar o mouse */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto; /* Centraliza o contêiner */
+    text-align: center; /* Centraliza a imagem dentro do contêiner */
+}
+
+.overlay {
+    position: absolute;
+    inset-block-end: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para o texto */
+    color: white;
+    inline-size: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease; /* Efeito de transição suave */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Torna o texto visível ao passar o mouse */
+}
